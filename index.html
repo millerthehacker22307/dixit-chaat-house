@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dixit Chaat House | Basket Chaat in Lucknow</title>
+<meta name="description" content="Dixit Chaat House, Lucknow — a 40-year-old chaat house founded in Chowk, famous for its signature Basket Chaat prepared in pure desi ghee. Visit us at One World Vista, Amar Shaheed Path. Open daily 5:00 PM – 10:00 PM.">
+<style>
+  :root{
+    --maroon:#6b1f1f;
+    --maroon-dark:#4a1414;
+    --saffron:#e89b1c;
+    --saffron-light:#f6c453;
+    --cream:#fff8ec;
+    --cream-dark:#fdeed3;
+    --ink:#2b1d16;
+    --muted:#6f5a4e;
+    --card:#ffffff;
+    --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  /* Header */
+  header{position:sticky;top:0;z-index:50;background:rgba(74,20,20,.97);backdrop-filter:blur(6px);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.18)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-mark{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--saffron-light),var(--saffron) 60%,#c97e0e);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--maroon-dark);font-size:19px;border:2px solid rgba(255,255,255,.35);flex-shrink:0}
+  .brand h1{font-size:19px;line-height:1.15;letter-spacing:.2px}
+  .brand small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--saffron-light);font-weight:600}
+  nav.links{display:flex;gap:22px;font-size:14px;font-weight:600}
+  nav.links a{opacity:.92}
+  nav.links a:hover{opacity:1;color:var(--saffron-light)}
+  .header-call{background:var(--saffron);color:var(--maroon-dark);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:700;white-space:nowrap}
+  .header-call:hover{background:var(--saffron-light)}
+  /* Hero */
+  .hero{background:linear-gradient(160deg,var(--maroon-dark) 0%,var(--maroon) 55%,#8a2d1d 100%);color:#fff;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(246,196,83,.28),transparent 45%),radial-gradient(circle at 10% 90%,rgba(232,155,28,.18),transparent 40%)}
+  .hero-inner{position:relative;padding:72px 0 64px;text-align:center}
+  .eyebrow{display:inline-block;background:rgba(246,196,83,.16);border:1px solid rgba(246,196,83,.55);color:var(--saffron-light);padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+  .hero h2{font-size:clamp(32px,5.5vw,54px);line-height:1.12;font-weight:800;margin:20px auto 16px;max-width:820px}
+  .hero h2 span{color:var(--saffron-light)}
+  .hero p{max-width:640px;margin:0 auto 30px;color:#f3e3d3;font-size:17px}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .15s ease,background .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--saffron);color:var(--maroon-dark)}
+  .btn-primary:hover{background:var(--saffron-light)}
+  .btn-outline{border:2px solid rgba(255,255,255,.75);color:#fff;background:transparent}
+  .btn-outline:hover{background:rgba(255,255,255,.1)}
+  .hero-meta{margin-top:34px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .hero-meta span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+  /* Sections */
+  section{padding:64px 0}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 38px}
+  .section-head .kicker{color:#b57708;font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+  .section-head h3{font-size:clamp(26px,4vw,36px);color:var(--maroon-dark);margin:8px 0 10px;line-height:1.2}
+  .section-head p{color:var(--muted)}
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch}
+  .about-card{background:var(--card);border-radius:var(--radius);padding:32px;box-shadow:0 6px 24px rgba(107,31,31,.08);border:1px solid #f3e2c8}
+  .about-card h4{color:var(--maroon);font-size:20px;margin-bottom:12px}
+  .about-card p{color:#4c3a30;margin-bottom:14px}
+  .about-card p:last-child{margin-bottom:0}
+  .heritage{background:linear-gradient(150deg,var(--maroon),var(--maroon-dark));color:#fff;border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+  .heritage .stat{border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:16px}
+  .heritage .stat:last-child{border-bottom:none;padding-bottom:0}
+  .heritage .stat strong{display:block;font-size:28px;color:var(--saffron-light);line-height:1.1}
+  .heritage .stat span{font-size:14px;color:#f0ddd0}
+  /* Menu */
+  .menu-section{background:var(--cream-dark)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 24px rgba(107,31,31,.09);border:1px solid #f3e2c8;display:flex;flex-direction:column}
+  .card-visual{height:130px;position:relative}
+  .v-basket{background:linear-gradient(135deg,#8a2d1d,#c9501f 55%,var(--saffron))}
+  .v-dahi{background:linear-gradient(135deg,var(--maroon),#93402a 55%,var(--saffron-light))}
+  .v-matar{background:linear-gradient(135deg,#5c3a12,#a06a14 55%,#d99a26)}
+  .card-visual::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.28),transparent 42%)}
+  .card-visual .tag{position:absolute;left:16px;bottom:14px;z-index:1;background:rgba(255,248,236,.95);color:var(--maroon-dark);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+  .card-body{padding:22px}
+  .card-body h4{color:var(--maroon-dark);font-size:19px;margin-bottom:8px}
+  .card-body p{color:var(--muted);font-size:14.5px}
+  .components{margin-top:26px;background:var(--card);border:1px dashed #d9a94f;border-radius:var(--radius);padding:24px 26px}
+  .components h4{color:var(--maroon);margin-bottom:12px;font-size:17px;text-align:center}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+  .chips span{background:var(--cream);border:1px solid #ecd9ae;color:#5d4632;font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px}
+  /* Why visit */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .why{background:var(--card);border-radius:var(--radius);padding:28px 24px;border-top:4px solid var(--saffron);box-shadow:0 6px 20px rgba(107,31,31,.07)}
+  .why .num{width:40px;height:40px;border-radius:12px;background:var(--cream-dark);color:var(--maroon);font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:17px}
+  .why h4{color:var(--maroon-dark);margin-bottom:8px;font-size:17px}
+  .why p{color:var(--muted);font-size:14.5px}
+  /* Gallery */
+  .gallery-section{background:linear-gradient(180deg,var(--cream),var(--cream-dark))}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .tile{border-radius:14px;min-height:170px;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;position:relative;overflow:hidden}
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.42))}
+  .tile h5,.tile p{position:relative;z-index:1}
+  .tile h5{font-size:16px;margin-bottom:3px}
+  .tile p{font-size:13px;opacity:.92}
+  .t1{background:linear-gradient(150deg,#8a2d1d,#c9501f)}
+  .t2{background:linear-gradient(150deg,var(--maroon-dark),var(--maroon))}
+  .t3{background:linear-gradient(150deg,#a06a14,#d99a26)}
+  .t4{background:linear-gradient(150deg,#6b1f1f,#93402a)}
+  .t5{background:linear-gradient(150deg,#c97e0e,#e89b1c)}
+  .t6{background:linear-gradient(150deg,#4a1414,#7a2418)}
+  .t7{background:linear-gradient(150deg,#93402a,#c9501f)}
+  .t8{background:linear-gradient(150deg,#5c3a12,#a06a14)}
+  /* Visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .visit-card{background:var(--card);border-radius:var(--radius);padding:30px;box-shadow:0 6px 24px rgba(107,31,31,.08);border:1px solid #f3e2c8}
+  .visit-card h4{color:var(--maroon);font-size:19px;margin-bottom:16px}
+  .hours-row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #f1e4cd;font-size:15px}
+  .hours-row:last-of-type{border-bottom:none}
+  .hours-row strong{color:var(--maroon-dark)}
+  .visit-card address{font-style:normal;color:#4c3a30;margin-bottom:8px}
+  .visit-card p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+  .visit-card .btn{padding:12px 22px;font-size:14px}
+  .btn-maroon{background:var(--maroon);color:#fff}
+  .btn-maroon:hover{background:var(--maroon-dark)}
+  /* Contact */
+  .contact-section{background:var(--cream-dark)}
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start}
+  .contact-info{background:linear-gradient(150deg,var(--maroon),var(--maroon-dark));color:#fff;border-radius:var(--radius);padding:30px}
+  .contact-info h4{font-size:20px;margin-bottom:12px}
+  .contact-info p{color:#f0ddd0;font-size:15px;margin-bottom:18px}
+  .contact-info a.line{display:block;padding:11px 0;border-top:1px solid rgba(255,255,255,.18);font-weight:600;font-size:15px}
+  .contact-info a.line:hover{color:var(--saffron-light)}
+  .contact-info a.line small{display:block;font-weight:400;color:#e5cdbb;font-size:12.5px;letter-spacing:.4px}
+  form{background:var(--card);border-radius:var(--radius);padding:30px;box-shadow:0 6px 24px rgba(107,31,31,.08);border:1px solid #f3e2c8}
+  form h4{color:var(--maroon-dark);font-size:19px;margin-bottom:6px}
+  form>p{color:var(--muted);font-size:14px;margin-bottom:18px}
+  label{display:block;font-size:13.5px;font-weight:700;color:var(--maroon-dark);margin-bottom:6px}
+  input,textarea{width:100%;border:1.5px solid #e6d3ae;border-radius:10px;padding:12px 14px;font:inherit;font-size:15px;background:#fffdf7;color:var(--ink);margin-bottom:16px}
+  input:focus,textarea:focus{outline:none;border-color:var(--saffron);box-shadow:0 0 0 3px rgba(232,155,28,.18)}
+  textarea{resize:vertical;min-height:96px}
+  .submit{width:100%;border:none;cursor:pointer;background:#1f7a3d;color:#fff;padding:14px;border-radius:999px;font-weight:700;font-size:15px}
+  .submit:hover{background:#186332}
+  /* Footer */
+  footer{background:var(--maroon-dark);color:#e9d5c6;padding:44px 0 26px}
+  .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-bottom:30px}
+  footer h5{color:#fff;font-size:16px;margin-bottom:10px}
+  footer p,footer a{font-size:14px;color:#e9d5c6}
+  footer a:hover{color:var(--saffron-light)}
+  footer address{font-style:normal}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.16);padding-top:18px;text-align:center;font-size:13px;color:#cdb09e}
+  @media (max-width:860px){
+    nav.links{display:none}
+    .about-grid,.visit-grid,.contact-grid{grid-template-columns:1fr}
+    .cards,.why-grid{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .footer-grid{grid-template-columns:1fr}
+    .hero-inner{padding:54px 0 48px}
+    section{padding:48px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="brand-mark">D</span>
+      <h1>Dixit Chaat House<small>Lucknow &middot; Since Chowk</small></h1>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#menu">Menu Highlights</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-call" href="tel:+919721114541">Call Now</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <span class="eyebrow">A Lucknow Favourite for About 40 Years</span>
+      <h2>Lucknow&rsquo;s Beloved <span>Basket Chaat</span>, Made the Dixit Way</h2>
+      <p>A crispy fried potato basket loaded with aloo tikki, papdi, bhalle, chickpeas, curd and chutneys — from a chaat house founded in Chowk and still run by the founder&rsquo;s family.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+919721114541">Call Now</a>
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Dixit+Chaat+House+One+World+Vista+Amar+Shaheed+Path+Lucknow" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <div class="hero-meta">
+        <span>Open Daily 5:00 PM – 10:00 PM</span>
+        <span>Prepared in Pure Desi Ghee</span>
+        <span>One World Vista, Amar Shaheed Path</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Our Story</span>
+        <h3>From Chowk to Amar Shaheed Path</h3>
+        <p>A family chaat house with deep roots in old Lucknow, carrying the same flavours forward to a new generation.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h4>A Heritage Born in Chowk</h4>
+          <p>Dixit Chaat House began in Chowk, in the heart of old Lucknow, about 40 years ago. What started as the founder&rsquo;s chaat shop in one of the city&rsquo;s most loved food quarters grew into a name Lucknow associates with honest, flavourful chaat.</p>
+          <p>Today, the house is run by the founder&rsquo;s grandson, Gaurav Dixit, who continues the family tradition at the One World Vista branch on Amar Shaheed Path — bringing the original Chowk heritage to a new neighbourhood.</p>
+          <p>True to the shop&rsquo;s own signboard, the chaats here are prepared in pure desi ghee, a detail the family has held on to through the decades.</p>
+        </div>
+        <div class="heritage">
+          <div class="stat"><strong>~40 Years</strong><span>Serving chaat in Lucknow</span></div>
+          <div class="stat"><strong>Chowk</strong><span>Where the original shop was founded</span></div>
+          <div class="stat"><strong>3rd Generation</strong><span>Now run by the founder&rsquo;s grandson, Gaurav Dixit</span></div>
+          <div class="stat"><strong>Pure Desi Ghee</strong><span>Chaats prepared the traditional way</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights -->
+  <section id="menu" class="menu-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Signature &amp; Menu Highlights</span>
+        <h3>The Plates People Come Back For</h3>
+        <p>No long lists and no fuss — just the documented house specialities, made fresh at the counter every evening.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-visual v-basket"><span class="tag">Signature</span></div>
+          <div class="card-body">
+            <h4>Basket Chaat</h4>
+            <p>The house signature: a crispy fried potato basket loaded with aloo tikki, papdi, bhalle, chickpeas and boiled potatoes, layered with curd, saunth and green chutneys, and finished with sev, pomegranate and masala.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-visual v-dahi"><span class="tag">House Favourite</span></div>
+          <div class="card-body">
+            <h4>Dahi Tikki</h4>
+            <p>Crisp tikki served with smooth, chilled curd and the house chutneys — a cool, tangy balance to the crunch of the tikki, in the classic Lucknow chaat style.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-visual v-matar"><span class="tag">Evening Classic</span></div>
+          <div class="card-body">
+            <h4>Matar Chaat</h4>
+            <p>A warm, comforting evening staple from the counter — soft matar tossed with house spices and chutneys, served fresh as the evening rush begins.</p>
+          </div>
+        </article>
+      </div>
+      <div class="components">
+        <h4>Inside the Basket Chaat</h4>
+        <div class="chips">
+          <span>Crispy Potato Basket</span>
+          <span>Aloo Tikki</span>
+          <span>Papdi</span>
+          <span>Bhalle</span>
+          <span>Chickpeas</span>
+          <span>Boiled Potatoes</span>
+          <span>Curd</span>
+          <span>Saunth</span>
+          <span>Green Chutneys</span>
+          <span>Sev</span>
+          <span>Pomegranate</span>
+          <span>House Masala</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Visit -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">At the Counter</span>
+        <h3>Why Visit Dixit Chaat House</h3>
+        <p>Some places serve a snack. This one serves a small piece of Lucknow&rsquo;s food history, every single evening.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why">
+          <div class="num">1</div>
+          <h4>Prepared in Pure Desi Ghee</h4>
+          <p>As the shop&rsquo;s own signboard proudly states, the chaats are prepared in pure desi ghee — the traditional way, with the richness it brings to every bite.</p>
+        </div>
+        <div class="why">
+          <div class="num">2</div>
+          <h4>A Signature Worth the Trip</h4>
+          <p>The Basket Chaat is not a copy of anyone else&rsquo;s plate. Its crisp potato basket, generous fillings and layered chutneys make it the one dish regulars recommend first.</p>
+        </div>
+        <div class="why">
+          <div class="num">3</div>
+          <h4>Family-Run, Generation to Generation</h4>
+          <p>Founded in Chowk about 40 years ago and now led by the founder&rsquo;s grandson, the counter still runs on the family&rsquo;s own recipes and standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">The Evening Counter</span>
+        <h3>Flavours of the House</h3>
+        <p>A glimpse of what defines an evening at Dixit Chaat House — crisp, tangy, sweet and unmistakably Lucknow.</p>
+      </div>
+      <div class="gallery">
+        <div class="tile t1"><h5>The Basket</h5><p>Crispy fried potato, golden and crisp</p></div>
+        <div class="tile t2"><h5>The Fillings</h5><p>Tikki, papdi, bhalle and chickpeas</p></div>
+        <div class="tile t3"><h5>The Chutneys</h5><p>Saunth and green chutneys, layered fresh</p></div>
+        <div class="tile t4"><h5>The Finish</h5><p>Sev, pomegranate and house masala</p></div>
+        <div class="tile t5"><h5>Dahi Tikki</h5><p>Crisp tikki with cool, smooth curd</p></div>
+        <div class="tile t6"><h5>Matar Chaat</h5><p>Warm, spiced and comforting</p></div>
+        <div class="tile t7"><h5>Pure Desi Ghee</h5><p>The traditional way, every day</p></div>
+        <div class="tile t8"><h5>Chowk Heritage</h5><p>About 40 years of Lucknow evenings</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Opening Hours &amp; Visit Us</span>
+        <h3>Plan Your Evening Visit</h3>
+        <p>We open every evening — arrive hungry, and give the Basket Chaat the attention it deserves.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-card">
+          <h4>Opening Hours</h4>
+          <div class="hours-row"><span>Monday – Friday</span><strong>5:00 PM – 10:00 PM</strong></div>
+          <div class="hours-row"><span>Saturday</span><strong>5:00 PM – 10:00 PM</strong></div>
+          <div class="hours-row"><span>Sunday</span><strong>5:00 PM – 10:00 PM</strong></div>
+          <p style="margin-top:14px">Open daily from 5:00 PM to 10:00 PM. Evenings are the heart of chaat time in Lucknow, and the counter is at its freshest then.</p>
+        </div>
+        <div class="visit-card">
+          <h4>Find Us</h4>
+          <address>One World Vista, Shalimar,<br>Amar Shaheed Path,<br>Lucknow, Uttar Pradesh 226010</address>
+          <p>Our branch on Amar Shaheed Path — carrying forward the original Chowk shop&rsquo;s heritage. Call ahead for enquiries, or follow the map to reach us.</p>
+          <a class="btn btn-maroon" href="https://www.google.com/maps/search/?api=1&query=Dixit+Chaat+House+One+World+Vista+Amar+Shaheed+Path+Lucknow" target="_blank" rel="noopener">Get Directions</a>
+          &nbsp;
+          <a class="btn btn-primary" href="tel:+919721114541">Call +91 97211 14541</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Contact</span>
+        <h3>Send Us an Enquiry</h3>
+        <p>Planning a visit, a group order or an event? Send a message and we will get back to you on WhatsApp.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h4>Dixit Chaat House</h4>
+          <p>One World Vista, Shalimar, Amar Shaheed Path, Lucknow, Uttar Pradesh 226010</p>
+          <a class="line" href="tel:+919721114541">+91 97211 14541<small>Tap to call</small></a>
+          <a class="line" href="https://www.instagram.com/dixitchaathouse" target="_blank" rel="noopener">@dixitchaathouse on Instagram<small>Follow us for updates</small></a>
+          <a class="line" href="https://www.google.com/maps/search/?api=1&query=Dixit+Chaat+House+One+World+Vista+Amar+Shaheed+Path+Lucknow" target="_blank" rel="noopener">Find us on Google Maps<small>One World Vista, Amar Shaheed Path</small></a>
+        </div>
+        <form id="enquiryForm">
+          <h4>WhatsApp Enquiry</h4>
+          <p>Fill in the details below — your message will open in WhatsApp, ready to send.</p>
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required>
+          <label for="item">Item / Event</label>
+          <input id="item" name="item" type="text" placeholder="e.g. Basket Chaat, group visit, event enquiry" required>
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you would like to enquire about" required></textarea>
+          <button class="submit" type="submit">Send Enquiry on WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h5>Dixit Chaat House</h5>
+        <p>A family-run chaat house from Chowk, Lucknow — about 40 years of chaat, now served at One World Vista, Amar Shaheed Path.</p>
+      </div>
+      <div>
+        <h5>Visit Us</h5>
+        <address>One World Vista, Shalimar,<br>Amar Shaheed Path,<br>Lucknow, Uttar Pradesh 226010</address>
+        <p style="margin-top:8px">Open Daily: 5:00 PM – 10:00 PM</p>
+      </div>
+      <div>
+        <h5>Get in Touch</h5>
+        <p><a href="tel:+919721114541">Phone: +91 97211 14541</a></p>
+        <p style="margin-top:6px"><a href="https://www.instagram.com/dixitchaathouse" target="_blank" rel="noopener">Instagram: @dixitchaathouse</a></p>
+        <p style="margin-top:6px"><a href="https://www.google.com/maps/search/?api=1&query=Dixit+Chaat+House+One+World+Vista+Amar+Shaheed+Path+Lucknow" target="_blank" rel="noopener">Get Directions on Google Maps</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; Dixit Chaat House, Lucknow. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var item = document.getElementById('item').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var text = 'Hello Dixit Chaat House,\n\nName: ' + name + '\nItem / Event: ' + item + '\nMessage: ' + message;
+    window.open('https://wa.me/919721114541?text=' + encodeURIComponent(text), '_blank');
+  });
+</script>
+</body>
+</html>
